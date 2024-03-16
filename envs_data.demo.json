@@ -1,0 +1,16 @@
+{
+  "remotePath": [],
+  "folders_to_upload": [
+    "app",
+    "bootstrap",
+    "config",
+    "resources",
+    "routes",
+    "database",
+    "db"
+  ],
+  "ftp_host_domain": "hosting DOMAIN NAME",
+  "ftp_username_domain": "username used for logging in with FTP",
+  "ftp_password_domain": "secure_password",
+  "baseline_dev_folder": "./aut/envs__/"
+}

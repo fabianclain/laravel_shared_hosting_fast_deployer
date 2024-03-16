@@ -15,7 +15,7 @@ const {remotePath, folders_to_upload, ftp_host_domain, ftp_username_domain, ftp_
 let ftp_host = ftp_host_domain;
 let ftp_username = ftp_username_domain;
 let ftp_password = ftp_password_domain;
-
+console.log(remotePath)
 let remove_directory_before_uploading = false; //attention when this is true
 const client_verbose_status = false;
 
@@ -99,29 +99,8 @@ async function run_deployment() {
       }
       await console.log("upload finished, writing env.");
       if (should_write_env_file) {
-        if (remotePath[remote][0] === "/housenia.ro")
-          envFileChoice = baseline_dev_folder + ".env_housenia";
-        else if (remotePath[remote] === "/essm.ro")
-          envFileChoice = baseline_dev_folder + ".env_essm";
-        else if (remotePath[remote] === "/aplicatie.essm.ro") {
-          envFileChoice = baseline_dev_folder + ".env_aplicatieEssm";
-          console.log("YOU DEPLOYED TO PRODUCTION!!!!");
-        } else if (remotePath[remote] === "/beta.housenia.ro")
-          envFileChoice = baseline_dev_folder + ".env_beta_housenia";
-        else if (remotePath[remote] === "/app.device-testing.ro")
-          envFileChoice = baseline_dev_folder + ".env_device_testing";
-        else if (remotePath[remote] === "/testing.housenia.ro")
-          envFileChoice = baseline_dev_folder + ".env_testing_housenia";
-        else if (remotePath[remote] === "/housenia-test-env.essm.ro")
-          envFileChoice = baseline_dev_folder + ".env-housenia_test_essm";
-        else if (remotePath[remote] === "/safeness.ro")
-          envFileChoice = baseline_dev_folder + ".env_safeness";
-        else if (remotePath[remote] === "/moverbook.com")
-          envFileChoice = baseline_dev_folder + ".env_moverbook";
-        else if (remotePath[remote] === "/demo.essm.ro")
-          envFileChoice = baseline_dev_folder + ".env_demo_essm";
-        else if (remotePath[remote] === "/platforma.dobai.net")
-          envFileChoice = baseline_dev_folder + ".env_dobai";
+        if (remotePath[remote][0] === "/domain_specific_path")
+          envFileChoice = baseline_dev_folder + ".domain_specific_env_file";
         else envFileChoice = baseline_dev_folder + ".env-backup";
 
         envFile = resolve(envFileChoice);
