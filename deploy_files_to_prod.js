@@ -22,6 +22,8 @@ const client_verbose_status = false;
 const static_version_number = "APP_VERSION = 1.7.5.7";
 
  localFiles = folders_to_upload;
+console.log(remotePath);
+
  
 function writeVersionFile() {
   readFile(envFile, "utf-8", function (err, contents) {
