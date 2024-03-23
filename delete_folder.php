@@ -58,6 +58,7 @@ $folder_paths = [
     "/firmassm.eu",
     "/great-leads.com",
     "/hoe.so",
+    "/prev.ro",
     "/housenia-test-env.essm.ro",
     "/housenia.ro",
     "/online-ehs.com",
